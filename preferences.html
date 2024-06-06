@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day Planner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="navbar navbar-expand fixed-top bg-white border-bottom">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          Calendar
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="preferences.html">
+          Preferences
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="events.html">
+          Events
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class = "preferences-container">
+  <div class="bedtime-input">
+    <form>
+      <label for="bedtime">Input a preferred bedtime: </label>
+      <input type="time" id="bedtime" name="bedtime">
+      <span id="value"></span>
+    </form>
+    <script>
+      const bedtime = document.getElementById("bedtime");
+      const valueSpan = document.getElementById("value");
+
+      bedtime.addEventListener(
+        "input",
+        () => {
+          valueSpan.innerText = bedtime.value;
+        },
+        false,
+      );
+    </script>
+  </div>
+  <div class="alarm-input">
+    <form>
+      <label for="alarm">Input a preferred time to wake up: </label>
+      <input type="time" id="alarm" name="alarm">
+      <span id="value2"></span>
+    </form>
+
+    <script>
+      const alarm = document.getElementById("alarm");
+      const valueSpan = document.getElementById("value2");
+
+      alarm.addEventListener(
+      "input",
+      () => {
+      valueSpan.innerText = alarm.value;
+      },
+      false,
+      );
+    </script>
+  </div>
+
+  <div class="freetime-input">
+    <form>
+      <label for="freetime">Input a preferred amount of free time: </label>
+      <input type="time" id="freetime" name="freetime">
+      <span id="value3"></span>
+    </form>
+
+    <script>
+      const freetime = document.getElementById("freetime");
+      const valueSpan = document.getElementById("value3");
+
+      freetime.addEventListener(
+        "input",
+        () => {
+          valueSpan.innerText = freetime.value;
+        },
+        false,
+      );
+    </script>
+
+  </div>
+</div>
+
+
+</body>
+</html>
